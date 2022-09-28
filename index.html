@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>State Dependent Drop Down Selects </title>
+  </head>
+
+  <body>
+    <select id="sel1" onChange="updateSelect2(this.value)">
+      <option value="a" selected>a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>
+    </select>
+    <select id="sel2" onChange="updateSelect1(this.value)">
+      <option value="a" selected>apple</option>
+      <option value="b">banana</option>
+      <option value="c">city</option>
+      <option value="d">dom</option>
+      <option value="e">end</option>
+      <option value="f">forEach</option>
+      <option value="g">gold</option>
+    </select>
+    <!-- <div id="root"></div> -->
+    <script>
+      const state = {
+        a: "apple",
+        b: "banana",
+        c: "city",
+        d: "dom",
+        e: "end",
+        f: "forEach",
+        g: "gold",
+      };
+      function updateSelect2(sel) {
+        if (sel === "a") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a" selected>apple</option>
+      <option value="b">banana</option>
+      <option value="c">city</option>
+      <option value="d">dom</option>
+      <option value="e">end</option>
+      <option value="f">forEach</option>
+      <option value="g">gold</option>`;
+        } else if (sel === "b") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a">apple</option>
+      <option value="b" selected>banana</option>
+      <option value="c">city</option>
+      <option value="d">dom</option>
+      <option value="e">end</option>
+      <option value="f">forEach</option>
+      <option value="g">gold</option>`;
+        } else if (sel === "c") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a">apple</option>
+      <option value="b">banana</option>
+      <option value="c" selected>city</option>
+      <option value="d">dom</option>
+      <option value="e">end</option>
+      <option value="f">forEach</option>
+      <option value="g">gold</option>`;
+        } else if (sel === "d") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a">apple</option>
+      <option value="b">banana</option>
+      <option value="c">city</option>
+      <option value="d" selected>dom</option>
+      <option value="e">end</option>
+      <option value="f">forEach</option>
+      <option value="g">gold</option>`;
+        } else if (sel === "e") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a">apple</option>
+      <option value="b">banana</option>
+      <option value="c">city</option>
+      <option value="d">dom</option>
+      <option value="e" selected>end</option>
+      <option value="f">forEach</option>
+      <option value="g">gold</option>`;
+        } else if (sel === "f") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a">apple</option>
+      <option value="b">banana</option>
+      <option value="c">city</option>
+      <option value="d">dom</option>
+      <option value="e">end</option>
+      <option value="f" selected>forEach</option>
+      <option value="g">gold</option>`;
+        } else if (sel === "g") {
+          document.getElementById(
+            "sel2"
+          ).innerHTML = `<option value="a">apple</option>
+      <option value="b">banana</option>
+      <option value="c">city</option>
+      <option value="d">dom</option>
+      <option value="e">end</option>
+      <option value="f">forEach</option>
+      <option value="g" selected>gold</option>`;
+        }
+      }
+
+      function updateSelect1(sel) {
+        if (sel === "a") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a" selected>a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>`;
+        } else if (sel === "b") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a">a</option>
+      <option value="b" selected>b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>`;
+        } else if (sel === "c") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c" selected>c</option>
+      <option value="d">d</option
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>`;
+        } else if (sel === "d") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d" selected>d</option>
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>`;
+        } else if (sel === "e") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e" selected>e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>`;
+        } else if (sel === "f") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e">e</option>
+      <option value="f" selected>f</option>
+      <option value="g">g</option>`;
+        } else if (sel === "g") {
+          document.getElementById(
+            "sel1"
+          ).innerHTML = `<option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g" selected>g</option>`;
+        }
+      }
+    </script>
+  </body>
+</html>
